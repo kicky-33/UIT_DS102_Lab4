@@ -1,23 +1,27 @@
-# LAB 4: DECISION TREE & RANDOM FOREST (DS102)
+# LAB 4: DECISION TREE & RANDOM FOREST
 
 ## 1. Giới thiệu dự án
+Tên: La Gia Hân
+MSSV: 24520448
 
 Dự án này thực hiện cài đặt và đánh giá hai thuật toán học máy: **Decision Tree** và **Random Forest** trên tập dữ liệu **Wine Quality**. Mục tiêu cốt lõi là so sánh hiệu suất giữa việc tự hiện thực thuật toán bằng **NumPy** và sử dụng thư viện chuyên dụng **Scikit-learn**.
 
+Link dataset: [Wine Quality](https://archive.ics.uci.edu/dataset/186/wine+quality)
+
 ## 2. Cấu trúc thư mục
 
-Dự án được tổ chức theo cấu trúc module chuyên nghiệp để tối ưu hóa việc tái sử dụng mã nguồn:
+Dự án được tổ chức theo cấu trúc module như sau, nhằm tối ưu hóa việc tái sử dụng mã nguồn:
 
 ```text
 LAB4_DS102/
-├── data/                   # Chứa bộ dữ liệu gốc (winequality-red.csv, white.csv)
+├── data/                   # Chứa dataset (winequality-red.csv, white.csv)
 ├── src/                    # Các module xử lý logic cốt lõi
 │   ├── DecisionTree.py     # Cài đặt Decision Tree (Assig 1)
 │   ├── DecisionTreeRF.py   # Decision Tree tối ưu cho Random Forest
 │   ├── RandomForest.py     # Cài đặt Random Forest (Assig 2)
 │   ├── data_prepare.py     # Tiền xử lý dữ liệu & Stratified Sampling
-│   ├── GridSearch_a1.py    # Logic Tuning cho Assignment 1
-│   └── GridSearch_a2.py    # Logic Tuning cho Assignment 2
+│   ├── GridSearch_a1.py    # Tuning cho Assignment 1
+│   └── GridSearch_a2.py    # Tuning cho Assignment 2
 ├── 1.py                    # Script chạy Assignment 1
 ├── 2.py                    # Script chạy Assignment 2
 ├── 3.py                    # Script chạy Assignment 3 (Library)
@@ -37,7 +41,7 @@ LAB4_DS102/
 
 * Hiện thực kỹ thuật **Bagging** (Bootstrap Aggregating).
 * Mỗi cây được huấn luyện trên một tập mẫu **Bootstrap** và một tập con các đặc trưng ngẫu nhiên (Feature Randomness).
-* Kết hợp dự đoán thông qua cơ chế **Majority Voting** (Biểu quyết đa số).
+* Kết hợp dự đoán thông qua cơ chế **Majority Voting**.
 
 ### Assignment 3: Machine Learning Library
 
@@ -71,17 +75,6 @@ Kết quả dưới đây được ghi nhận sau khi thực hiện **Stratified
 
 * Quá trình Tuning cho thấy mô hình rất nhạy cảm với tham số `max_depth`. Việc tìm ra độ sâu tối ưu là chìa khóa để cân bằng giữa Bias và Variance.
 * Đối với Random Forest, việc tăng số lượng cây (`n_trees`) giúp mô hình ổn định hơn và đạt kết quả tốt hơn trên tập kiểm tra.
-
-## 6. Hướng dẫn chạy code
-
-1. Đảm bảo dữ liệu nằm trong thư mục `data/`.
-2. Chạy Assignment tương ứng:
-```bash
-python 1.py
-python 2.py
-python 3.py
-
-```
 
 
 
