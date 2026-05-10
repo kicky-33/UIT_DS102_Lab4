@@ -77,7 +77,4 @@ Kết quả dưới đây được ghi nhận sau khi thực hiện **Stratified
 * Đối với Random Forest, việc tăng số lượng cây (`n_trees`) giúp mô hình ổn định hơn và đạt kết quả tốt hơn trên tập kiểm tra.
 
 
-
----
-
 *Báo cáo được thực hiện cho bài Lab 4 môn DS102 - Học máy thống kê.*
